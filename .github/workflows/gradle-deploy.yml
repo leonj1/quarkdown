@@ -17,7 +17,7 @@ jobs:
     uses: iamgio/quarkdown/.github/workflows/gradle-test.yml@main
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     needs: [test]
 
     steps:
@@ -87,7 +87,7 @@ jobs:
 
   dependency-submission:
 
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     permissions:
       contents: write
 
